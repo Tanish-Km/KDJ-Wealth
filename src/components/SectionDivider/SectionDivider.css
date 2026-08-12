@@ -1,0 +1,25 @@
+/* ═══════════════════════════════════════════
+   SECTION DIVIDER — Subtle Dark Variant
+   ═══════════════════════════════════════════ */
+.section-divider {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.section-divider svg {
+  width: 100%;
+  height: 40px;
+  display: block;
+  opacity: 0.3;
+}
+
+.section-divider-flip {
+  transform: scaleY(-1);
+}
+
+@media (max-width: 768px) {
+  .section-divider svg {
+    height: 28px;
+  }
+}

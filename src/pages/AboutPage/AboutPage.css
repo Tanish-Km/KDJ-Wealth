@@ -1,0 +1,509 @@
+/* ═══════════════════════════════════════════
+   ABOUT PAGE — Component-by-Component Light Gradient Spectrum
+   (Light Rose Red → Sunset Orange → Amber Yellow → Emerald Green → Coral Rose)
+   ═══════════════════════════════════════════ */
+
+/* ── About Hero (Soft Luminous Crimson Rose Red Gradient) ── */
+.about-hero {
+  background: linear-gradient(160deg, #FFF5F5 0%, #FED7D7 40%, #FFE3E3 100%) !important;
+  color: #1A202C !important;
+}
+
+.about-hero .page-hero-title {
+  color: #1A202C !important;
+  font-weight: 800;
+}
+
+.about-hero .page-hero-subtitle {
+  color: #4A5568 !important;
+  font-weight: 500;
+}
+
+.about-hero .section-badge {
+  background: rgba(229, 62, 62, 0.12) !important;
+  color: #C53030 !important;
+  border: 1px solid rgba(229, 62, 62, 0.3) !important;
+}
+
+.about-hero .page-hero-wave path {
+  fill: #FFF5F5 !important;
+}
+
+/* ── Component 1: Our Story (Soft Luminous Crimson Rose Red Gradient) ── */
+.about-story-section {
+  padding: 100px 0;
+  position: relative;
+  background: linear-gradient(160deg, #FFF5F5 0%, #FED7D7 40%, #FFE3E3 100%);
+  color: #1A202C;
+  overflow: hidden;
+}
+
+.about-story-section .section-badge {
+  background: rgba(229, 62, 62, 0.12) !important;
+  color: #C53030 !important;
+  border: 1px solid rgba(229, 62, 62, 0.3) !important;
+}
+
+.about-ambient-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.25;
+  animation: ambientFloat 40s ease-in-out infinite alternate;
+}
+
+@keyframes ambientFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+  100% { transform: translateY(10px) scale(0.98); }
+}
+
+.about-story-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-story-content h2 {
+  margin-bottom: 24px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #1A202C;
+  font-weight: 800;
+}
+
+.about-story-content p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #4A5568;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.about-story-image-card {
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(229, 62, 62, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 40px rgba(229, 62, 62, 0.1);
+}
+
+.about-story-placeholder {
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: float-orb 6s ease-in-out infinite;
+  color: #E53E3E;
+}
+
+.placeholder-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1A202C;
+  line-height: 1.4;
+}
+
+/* ── Component 2: Mission & Vision (Soft Sunset Orange Gradient) ── */
+.about-mv-section {
+  position: relative;
+  background: linear-gradient(160deg, #FFFAF0 0%, #FEEBC8 45%, #FFEDD5 100%);
+  color: #1A202C;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.about-mv-section .section-badge {
+  background: rgba(221, 107, 32, 0.12) !important;
+  color: #DD6B20 !important;
+  border: 1px solid rgba(221, 107, 32, 0.3) !important;
+}
+
+.about-mv-section h2 {
+  color: #1A202C;
+  font-weight: 800;
+}
+
+.about-mv-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.about-mv-card {
+  padding: 40px 36px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(221, 107, 32, 0.25);
+  box-shadow: 0 16px 40px rgba(221, 107, 32, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+}
+
+.about-mv-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+  color: #DD6B20;
+}
+
+.about-mv-card h3 {
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  color: #1A202C;
+  font-weight: 800;
+}
+
+.about-mv-card p {
+  font-size: 0.96rem;
+  color: #4A5568;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ── Component 3: Stats Counter (Soft Amber Yellow Gradient) ── */
+.about-stats-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #FFFFF0 0%, #FEFCBF 45%, #FEF08A 100%);
+  color: #1A202C;
+}
+
+.about-stats-container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  padding: 36px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(214, 158, 46, 0.35);
+  box-shadow: 0 16px 40px rgba(214, 158, 46, 0.12);
+  border-radius: var(--radius-xl);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #D69E2E;
+}
+
+.stat-value {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #B7791F 0%, #DD6B20 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: #2D3748;
+  font-weight: 700;
+}
+
+/* ── Component 4: Our Approach (Soft Emerald Mint Green Gradient) ── */
+.about-approach-section {
+  position: relative;
+  background: linear-gradient(160deg, #F0FFF4 0%, #C6F6D5 45%, #DCFCE7 100%);
+  color: #062319;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.about-approach-section .section-badge {
+  background: rgba(47, 133, 90, 0.12) !important;
+  color: #276749 !important;
+  border: 1px solid rgba(47, 133, 90, 0.3) !important;
+}
+
+.about-approach-section h2 {
+  color: #062319;
+  font-weight: 800;
+}
+
+.about-approach-section p {
+  color: #2F855A;
+  font-weight: 500;
+}
+
+.about-approach-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-approach-card {
+  padding: 32px 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(56, 161, 105, 0.28);
+  box-shadow: 0 16px 40px rgba(56, 161, 105, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+}
+
+.about-approach-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: rgba(47, 133, 90, 0.12);
+  border: 1px solid rgba(47, 133, 90, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 20px;
+  color: #276749;
+}
+
+.about-approach-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #062319;
+}
+
+.about-approach-card p {
+  font-size: 0.92rem;
+  color: #2D3748;
+  line-height: 1.65;
+}
+
+/* ── Component 5: Meet Our Director (Soft Coral Sunset Light Gradient + Horizontal Glass Card) ── */
+.about-team-section {
+  position: relative;
+  background: linear-gradient(160deg, #FFF5F5 0%, #FEEBC8 50%, #FFEDD5 100%);
+  color: #1A202C;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.about-team-section .section-badge {
+  background: rgba(221, 107, 32, 0.12) !important;
+  color: #DD6B20 !important;
+  border: 1px solid rgba(221, 107, 32, 0.3) !important;
+}
+
+.about-team-section h2 {
+  color: #1A202C;
+  font-weight: 800;
+}
+
+.about-team-section p {
+  color: #4A5568;
+  font-weight: 500;
+}
+
+.about-team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Wide Horizontal Rectangular Glassmorphic Card */
+.about-team-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+  padding: 36px 44px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(221, 107, 32, 0.35);
+  box-shadow: 0 20px 60px rgba(221, 107, 32, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 72px rgba(221, 107, 32, 0.2);
+  border-color: rgba(229, 62, 62, 0.5);
+}
+
+.about-team-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #E53E3E 0%, #DD6B20 50%, #D69E2E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 24px rgba(221, 107, 32, 0.3);
+}
+
+.about-team-info {
+  text-align: left;
+  flex: 1;
+}
+
+.about-team-info h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1A202C;
+  margin-bottom: 6px;
+}
+
+.about-team-role {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #C53030;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-team-info p {
+  font-size: 0.96rem;
+  color: #4A5568;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ── Component 6: Director's Message & Certifications (Soft Champagne Gold Gradient) ── */
+.about-cert-section {
+  position: relative;
+  background: linear-gradient(160deg, #FEFCBF 0%, #FEF3C7 50%, #FFEDD5 100%);
+  color: #1A202C;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.about-cert-section h2 {
+  color: #1A202C;
+  font-weight: 800;
+}
+
+.about-cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(214, 158, 46, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #1A202C;
+  box-shadow: 0 8px 24px rgba(214, 158, 46, 0.1);
+}
+
+.about-cert-check {
+  color: #DD6B20;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+/* ── Component 7: CTA Section (Soft Rose Sunset Light Gradient) ── */
+.about-cta-section {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #FEE2E2 0%, #FFEDD5 100%);
+  color: #1A202C;
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-cta-content h2 {
+  color: #1A202C;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.about-cta-content p {
+  color: #4A5568;
+  font-size: 1.05rem;
+  max-width: 550px;
+  margin: 0 auto 36px;
+  font-weight: 500;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .about-approach-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .about-story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-mv-grid { grid-template-columns: 1fr; }
+  .about-team-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 20px;
+  }
+  .about-team-info { text-align: center; }
+  .about-approach-grid { grid-template-columns: 1fr; }
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .about-stats-grid { grid-template-columns: 1fr; }
+}

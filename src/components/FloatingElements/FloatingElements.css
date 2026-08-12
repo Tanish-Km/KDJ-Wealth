@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════════
+   WHATSAPP BUTTON — Dark Glass
+   ═══════════════════════════════════════════ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.3);
+  transition: all var(--transition-base);
+  animation: whatsapp-pulse 3s ease-in-out infinite;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 36px rgba(37, 211, 102, 0.45);
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.3); }
+  50% { box-shadow: 0 4px 36px rgba(37, 211, 102, 0.5), 0 0 0 12px rgba(37, 211, 102, 0.06); }
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL TO TOP — Dark Glass
+   ═══════════════════════════════════════════ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 96px;
+  right: 32px;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-base);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  backdrop-filter: blur(12px);
+}
+
+.scroll-top-btn--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: rgba(11, 37, 69, 0.15);
+  color: var(--primary-light);
+  border-color: rgba(11, 37, 69, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .scroll-top-btn {
+    bottom: 82px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+}

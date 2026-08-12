@@ -1,0 +1,205 @@
+/* ═══════════════════════════════════════════
+   WHY CHOOSE — Pinned 5-Card Storytelling Stage
+   ═══════════════════════════════════════════ */
+.why-choose {
+  background: var(--bg-white);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0 60px;
+}
+
+.why-choose__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Story Chapter Progress Indicator */
+.why-choose__progress-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 8px 20px;
+  background: rgba(11, 37, 69, 0.04);
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  border-radius: var(--radius-full);
+}
+
+.why-choose__progress-counter {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  letter-spacing: 0.05em;
+}
+
+.why-choose__progress-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.why-choose__progress-step {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(11, 37, 69, 0.30);
+  transition: all var(--transition-base);
+  opacity: 0.6;
+}
+
+.why-choose__progress-step--active {
+  background: #C89B3C;
+  width: 36px;
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(200, 155, 60, 0.14);
+}
+
+/* Card Stage Container */
+.why-choose__stage {
+  position: relative;
+  min-height: 380px;
+  max-width: 780px;
+  margin: 0 auto 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose__story-card-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0;
+  transform: translateY(40px) scale(0.94);
+  pointer-events: none;
+}
+
+.why-choose__story-card-wrapper--active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.why-choose__story-card-wrapper--passed {
+  opacity: 0;
+  transform: translateY(-40px) scale(0.94);
+  z-index: 1;
+}
+
+.why-choose__story-card-wrapper--upcoming {
+  opacity: 0;
+  transform: translateY(40px) scale(0.94);
+  z-index: 5;
+}
+
+/* Feature Card Styling */
+.feature-card {
+  width: 100%;
+  padding: 44px 40px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #DCEAF5;
+  box-shadow: 0 16px 48px rgba(7, 26, 46, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--premium-gold), var(--sky-blue));
+}
+
+.feature-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.feature-card__badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: rgba(200, 155, 60, 0.1);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(200, 155, 60, 0.2);
+}
+
+.feature-card__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: rgba(11, 37, 69, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(11, 37, 69, 0.08);
+}
+
+.feature-card__icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--primary-navy);
+}
+
+.feature-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--deep-text);
+}
+
+.feature-card__desc {
+  font-size: 1.05rem;
+  color: var(--mountain-slate);
+  line-height: 1.8;
+}
+
+.why-choose__cta {
+  text-align: center;
+}
+
+/* Mobile & Reduced Motion Fallback Stack */
+@media (max-width: 768px) {
+  .why-choose__stage {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: static;
+  }
+
+  .why-choose__story-card-wrapper {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .feature-card {
+    padding: 30px 24px;
+  }
+
+  .feature-card__title {
+    font-size: 1.4rem;
+  }
+
+  .why-choose__progress-bar {
+    display: none;
+  }
+}

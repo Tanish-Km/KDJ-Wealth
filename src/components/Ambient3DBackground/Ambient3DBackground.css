@@ -1,0 +1,256 @@
+/* ═══════════════════════════════════════════
+   3D AMBIENT BACKGROUND ENGINE — KDJ WEALTH
+   ═══════════════════════════════════════════ */
+
+.ambient-3d-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  perspective: 1200px;
+  background: transparent;
+}
+
+/* 3D Depth Grid */
+.ambient-3d-grid {
+  position: absolute;
+  inset: -50%;
+  background-image:
+    linear-gradient(rgba(94, 184, 234, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 184, 234, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  transform: rotateX(60deg) translateZ(-200px);
+  animation: gridDrift 40s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes gridDrift {
+  0% { transform: rotateX(60deg) translateY(0) translateZ(-200px); }
+  100% { transform: rotateX(60deg) translateY(80px) translateZ(-200px); }
+}
+
+/* Container for 3D Objects */
+.ambient-3d-objects {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+/* ── 3D Shape 1: Rotating Wireframe Cube ── */
+.shape-cube {
+  position: absolute;
+  top: 15%;
+  right: 12%;
+  width: 140px;
+  height: 140px;
+  transform-style: preserve-3d;
+  animation: rotateCube 35s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(94, 184, 234, 0.03);
+  border: 1px solid rgba(94, 184, 234, 0.25);
+  box-shadow: 0 0 24px rgba(94, 184, 234, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.face-front  { transform: translateZ(70px); }
+.face-back   { transform: rotateY(180deg) translateZ(70px); }
+.face-right  { transform: rotateY(90deg) translateZ(70px); }
+.face-left   { transform: rotateY(-90deg) translateZ(70px); }
+.face-top    { transform: rotateX(90deg) translateZ(70px); }
+.face-bottom { transform: rotateX(-90deg) translateZ(70px); }
+
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+/* ── 3D Shape 2: Orbital Glass Rings ── */
+.shape-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 155, 60, 0.35);
+  box-shadow: 0 0 32px rgba(200, 155, 60, 0.15), inset 0 0 20px rgba(200, 155, 60, 0.08);
+  transform-style: preserve-3d;
+}
+
+.shape-ring-1 {
+  width: 320px;
+  height: 320px;
+  left: 8%;
+  top: 25%;
+  animation: rotateRing1 45s linear infinite;
+}
+
+.shape-ring-2 {
+  width: 240px;
+  height: 240px;
+  right: 15%;
+  bottom: 20%;
+  border-color: rgba(8, 120, 201, 0.4);
+  box-shadow: 0 0 32px rgba(8, 120, 201, 0.2);
+  animation: rotateRing2 38s linear infinite reverse;
+}
+
+@keyframes rotateRing1 {
+  0% { transform: rotateX(65deg) rotateY(20deg) rotateZ(0deg); }
+  100% { transform: rotateX(65deg) rotateY(20deg) rotateZ(360deg); }
+}
+
+@keyframes rotateRing2 {
+  0% { transform: rotateX(-45deg) rotateY(-30deg) rotateZ(0deg); }
+  100% { transform: rotateX(-45deg) rotateY(-30deg) rotateZ(360deg); }
+}
+
+/* ── 3D Shape 3: Floating Translucent Spheres ── */
+.shape-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: floatSphere 24s ease-in-out infinite alternate;
+}
+
+.sphere-gold {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 35% 35%, rgba(200, 155, 60, 0.45), rgba(200, 155, 60, 0.05) 70%);
+  border: 1px solid rgba(200, 155, 60, 0.4);
+  box-shadow: 0 12px 40px rgba(200, 155, 60, 0.2);
+  left: 18%;
+  bottom: 15%;
+}
+
+.sphere-sky {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at 35% 35%, rgba(94, 184, 234, 0.4), rgba(94, 184, 234, 0.04) 70%);
+  border: 1px solid rgba(94, 184, 234, 0.35);
+  box-shadow: 0 12px 40px rgba(8, 120, 201, 0.25);
+  right: 22%;
+  top: 18%;
+  animation-delay: -8s;
+}
+
+.sphere-navy {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle at 35% 35%, rgba(11, 37, 69, 0.7), rgba(7, 26, 46, 0.2) 70%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  left: 45%;
+  top: 10%;
+  animation-delay: -14s;
+}
+
+@keyframes floatSphere {
+  0% { transform: translateY(0) translateZ(0) scale(1); }
+  50% { transform: translateY(-30px) translateZ(60px) scale(1.05); }
+  100% { transform: translateY(20px) translateZ(-40px) scale(0.95); }
+}
+
+/* ── 3D Shape 4: Glass Prisms ── */
+.shape-prism {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: rotate(45deg) rotateX(30deg);
+  box-shadow: 0 8px 32px rgba(7, 26, 46, 0.3);
+  animation: floatPrism 30s ease-in-out infinite alternate;
+}
+
+.prism-1 {
+  left: 35%;
+  bottom: 25%;
+}
+
+.prism-2 {
+  right: 32%;
+  top: 55%;
+  animation-delay: -12s;
+}
+
+@keyframes floatPrism {
+  0% { transform: rotate(45deg) rotateX(30deg) translateY(0); }
+  100% { transform: rotate(225deg) rotateX(60deg) translateY(-40px); }
+}
+
+/* ═══════════════════════════════════════════
+   PAGE-SPECIFIC VARIANT STYLES
+   ═══════════════════════════════════════════ */
+
+/* About Page Variant — Soft Translucent Glass Mesh for Light Red Gradient */
+.ambient-3d-about {
+  background: transparent !important;
+}
+
+.ambient-3d-about .cube-face {
+  background: rgba(229, 62, 62, 0.03);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+  box-shadow: 0 0 24px rgba(229, 62, 62, 0.08);
+}
+
+.ambient-3d-about .shape-ring {
+  border-color: rgba(221, 107, 32, 0.25);
+  box-shadow: 0 0 32px rgba(221, 107, 32, 0.1);
+}
+
+/* NRI Page Variant — Global Orbital Mesh & Gold Spheres */
+.ambient-3d-nri {
+  background: radial-gradient(circle at 30% 70%, #0B2545 0%, #071A2E 65%, #051322 100%);
+}
+.ambient-3d-nri .shape-ring-1 {
+  border-color: rgba(200, 155, 60, 0.5);
+  box-shadow: 0 0 48px rgba(200, 155, 60, 0.25);
+}
+
+/* Blogs Page Variant — Soft Translucent Glass Mesh for Light Orange Gradient */
+.ambient-3d-blogs {
+  background: transparent !important;
+}
+
+.ambient-3d-blogs .shape-cube {
+  opacity: 0.65;
+}
+
+/* Contact Page Variant — Professional Translucent Golden Glass Mesh for Light Yellow Gradient */
+.ambient-3d-contact {
+  background: transparent !important;
+}
+
+.ambient-3d-contact .cube-face {
+  background: rgba(214, 158, 46, 0.04);
+  border: 1px solid rgba(214, 158, 46, 0.28);
+  box-shadow: 0 0 28px rgba(214, 158, 46, 0.12);
+}
+
+.ambient-3d-contact .shape-ring {
+  border-color: rgba(214, 158, 46, 0.35);
+  box-shadow: 0 0 40px rgba(214, 158, 46, 0.15);
+}
+
+.ambient-3d-contact .sphere-gold {
+  left: 10%;
+  top: 20%;
+  background: radial-gradient(circle at 35% 35%, rgba(243, 208, 120, 0.6) 0%, rgba(200, 155, 60, 0.25) 70%, transparent 100%);
+  box-shadow: 0 0 48px rgba(214, 158, 46, 0.25);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-3d-grid,
+  .shape-cube,
+  .shape-ring,
+  .shape-sphere,
+  .shape-prism {
+    animation: none !important;
+  }
+}
