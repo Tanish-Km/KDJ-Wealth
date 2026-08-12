@@ -132,11 +132,20 @@ const BlogCard = ({ post, delay, onReadMore }) => {
   const color = categoryColors[post.category] || '#0B2545';
 
   return (
-    <article ref={ref} className={`blog-card glass-card scale-in ${inView ? 'visible' : ''} ${post.featured ? 'blog-card-featured' : ''}`} style={{ transitionDelay: `${delay}s` }}>
-      <div className="blog-card-image" style={{ background: `linear-gradient(135deg, ${color}18, ${color}08)` }}>
-        <div className="blog-card-placeholder" style={{ color }}>
-          {getIcon(categoryIcons[post.category] || 'chartLine', 48)}
-        </div>
+    <article
+      ref={ref}
+      className={`blog-card glass-card scale-in ${inView ? 'visible' : ''} ${post.featured ? 'blog-card-featured' : ''}`}
+      style={{ transitionDelay: `${delay}s`, cursor: 'pointer' }}
+      onClick={() => onReadMore({ post, triggerRef: btnRef })}
+    >
+      <div className="blog-card-image">
+        {post.image ? (
+          <img src={post.image} alt={post.title} className="blog-card-img" loading="lazy" />
+        ) : (
+          <div className="blog-card-placeholder" style={{ color }}>
+            {getIcon(categoryIcons[post.category] || 'chartLine', 48)}
+          </div>
+        )}
         <span className="blog-card-badge" style={{ background: color }}>{post.category}</span>
       </div>
       <div className="blog-card-body">
@@ -152,7 +161,10 @@ const BlogCard = ({ post, delay, onReadMore }) => {
           <button
             ref={btnRef}
             className="blog-card-link"
-            onClick={() => onReadMore({ post, triggerRef: btnRef })}
+            onClick={(e) => {
+              e.stopPropagation();
+              onReadMore({ post, triggerRef: btnRef });
+            }}
             aria-label={`Read article: ${post.title}`}
           >
             Read More →

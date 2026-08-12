@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './AboutPage.css';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
@@ -218,9 +219,9 @@ const AboutPage = () => {
               <a href="https://wa.me/919821891816" className="btn btn-accent glow-pulse" target="_blank" rel="noopener noreferrer">
                 Book Free Consultation
               </a>
-              <a href="/" className="btn btn-outline-light">
+              <Link to="/" className="btn btn-outline-light">
                 Explore Our Services →
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>

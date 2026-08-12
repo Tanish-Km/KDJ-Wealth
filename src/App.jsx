@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header/Header';
@@ -11,18 +11,17 @@ import NRIPage from './pages/NRIPage/NRIPage';
 import BlogsPage from './pages/BlogsPage/BlogsPage';
 import SupportPage from './pages/SupportPage/SupportPage';
 import CalculatorsPage from './pages/CalculatorsPage/CalculatorsPage';
-import { initGSAP } from './gsapAnimations';
+import { initGSAP, killGSAP } from './gsapAnimations';
 import './App.css';
 
-/* Scroll to top on route change + reinit GSAP */
+/* Scroll to top instantly on route change */
 function ScrollToTopOnNav() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Re-initialize GSAP after DOM settles on route change
-    const timer = setTimeout(() => initGSAP(), 100);
-    return () => clearTimeout(timer);
   }, [pathname]);
+
   return null;
 }
 

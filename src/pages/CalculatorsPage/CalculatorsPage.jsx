@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './CalculatorsPage.css';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
@@ -138,9 +139,9 @@ const CalculatorsPage = () => {
               <a href="https://wa.me/919821891816" className="btn btn-accent glow-pulse" target="_blank" rel="noopener noreferrer">
                 {getIcon('messageCircle', 18)} Talk to an Advisor
               </a>
-              <a href="/support" className="btn btn-outline">
+              <Link to="/support" className="btn btn-outline">
                 {getIcon('phone', 18)} Schedule a Call
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>

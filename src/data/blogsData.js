@@ -24,6 +24,7 @@ export const blogPostsData = [
     readTime: '5 min read',
     author: 'KDJ Research Team',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Systematic Investment Plans, commonly known as SIPs, have emerged as the most popular and effective way for Indian investors to build long-term wealth. Rather than trying to time the market — a strategy that even professional fund managers struggle with — SIPs allow you to invest a fixed amount at regular intervals, typically monthly.',
       'The magic of SIPs lies in two powerful principles: rupee cost averaging and compounding. When markets are down, your fixed SIP amount buys more units. When markets are up, you buy fewer units. Over time, this averages out your purchase cost, reducing the impact of market volatility on your portfolio.',
@@ -41,6 +42,7 @@ export const blogPostsData = [
     readTime: '7 min read',
     author: 'Aditya Akhriya',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Market corrections — defined as a decline of 10% or more from a recent peak — are a natural and healthy part of the stock market cycle. Yet, every time one occurs, headlines scream doom and investors rush to redeem their investments, often locking in losses that could have been temporary.',
       'Historical data tells a very different story. The Sensex has experienced over 15 major corrections since 2000, yet it has delivered a CAGR of approximately 12–14% over the long term. Every single correction was followed by a recovery, and investors who stayed the course were rewarded handsomely.',
@@ -58,6 +60,7 @@ export const blogPostsData = [
     readTime: '6 min read',
     author: 'KDJ Research Team',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Equity Linked Savings Schemes (ELSS) remain one of the most efficient tax-saving instruments available to Indian investors. Under Section 80C of the Income Tax Act, you can claim a deduction of up to ₹1.5 lakh per year, potentially saving up to ₹46,800 in taxes (for the highest tax bracket).',
       'What makes ELSS stand out from other 80C options like PPF and NSC is the shortest lock-in period of just 3 years, combined with the potential for equity-like returns. While PPF offers a fixed 7.1% return, top ELSS funds have historically delivered 12–18% CAGR over 5–10 year periods.',
@@ -75,6 +78,7 @@ export const blogPostsData = [
     readTime: '9 min read',
     author: 'Aditya Akhriya',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Non-Resident Indians represent a significant and growing segment of mutual fund investors in India. With the Indian economy projected to become the third-largest globally, NRIs are increasingly looking to participate in India\'s growth story through mutual fund investments.',
       'The first step for NRI mutual fund investment is completing KYC compliance. NRIs need to provide their passport, overseas address proof, and a PAN card. Investments can be made through NRE (Non-Resident External) or NRO (Non-Resident Ordinary) accounts. NRE investments are fully repatriable, while NRO investments have certain restrictions under FEMA guidelines.',
@@ -92,6 +96,7 @@ export const blogPostsData = [
     readTime: '8 min read',
     author: 'KDJ Research Team',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Retirement planning is perhaps the most important financial goal, yet it\'s the one most Indians underestimate. A common misconception is that ₹1 crore is "enough" to retire comfortably. But when you factor in inflation, rising healthcare costs, and increasing life expectancy, the picture changes dramatically.',
       'Let\'s do the math: if you\'re 30 years old, spending ₹50,000 per month today, and plan to retire at 60, you\'ll need approximately ₹1.5 lakh per month at retirement (assuming 6% inflation). To sustain this for 25 years post-retirement, you\'d need a corpus of approximately ₹5–6 crore.',
@@ -109,6 +114,7 @@ export const blogPostsData = [
     readTime: '6 min read',
     author: 'Aditya Akhriya',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
     content: [
       'One of the most fundamental decisions in mutual fund investing is choosing between large-cap, mid-cap, and small-cap funds. Each category serves a different purpose in your portfolio and carries a distinct risk-return profile.',
       'Large-cap funds invest in the top 100 companies by market capitalisation — established businesses like Reliance, TCS, HDFC Bank, and Infosys. These funds offer relatively stable returns (10–13% CAGR historically) with lower volatility. They\'re ideal for conservative investors and as a core portfolio holding.',
@@ -126,6 +132,7 @@ export const blogPostsData = [
     readTime: '5 min read',
     author: 'KDJ Research Team',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop',
     content: [
       'Most investors start a SIP and keep the amount constant for years. While this is still a great strategy, there\'s a simple tweak that can dramatically multiply your wealth: the Step-Up SIP. By increasing your SIP amount by just 10% every year, you can potentially triple your final corpus compared to a flat SIP.',
       'Here\'s the math: A flat SIP of ₹10,000/month at 12% returns for 20 years gives you approximately ₹1 crore. But a Step-Up SIP starting at ₹10,000 with a 10% annual increase gives you approximately ₹2.6 crore over the same period. That\'s 2.6x more wealth from a simple annual increase.',
@@ -143,6 +150,7 @@ export const blogPostsData = [
     readTime: '7 min read',
     author: 'Aditya Akhriya',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop',
     content: [
       'The Union Budget 2026 introduced several important changes to mutual fund taxation that every investor needs to understand. While the overall framework remains equity-friendly, there are nuances that can significantly impact your post-tax returns.',
       'For equity mutual funds (holding period > 1 year), Long-Term Capital Gains (LTCG) above ₹1.25 lakh are now taxed at 12.5%. Short-term gains (holding period < 1 year) continue to be taxed at 20%. The LTCG exemption threshold increase from ₹1 lakh to ₹1.25 lakh provides a marginal benefit for long-term investors.',

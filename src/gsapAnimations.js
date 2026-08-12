@@ -270,25 +270,36 @@ export function animateBlogModalClose(modalEl, onComplete) {
   });
 }
 
-/* ── Master GSAP Initializer ── */
-export function initGSAP() {
+/* ── Master GSAP Cleanup ── */
+export function killGSAP() {
   if (typeof window === 'undefined') return;
+  // Safely unpin and revert DOM nodes to their original parent elements before React unmounts
+  ScrollTrigger.getAll().forEach((t) => {
+    t.kill(true);
+  });
+}
 
-  // Kill old ScrollTriggers on route changes
-  ScrollTrigger.getAll().forEach((t) => t.kill());
+/* ── Master GSAP Initializer ── */
+export function initGSAP(scope) {
+  if (typeof window === 'undefined') return null;
+
+  // Revert and kill old ScrollTriggers on route changes
+  killGSAP();
 
   if (prefersReducedMotion()) {
     console.info('prefers-reduced-motion is active. High motion animations bypassed.');
-    return;
+    return null;
   }
 
-  requestAnimationFrame(() => {
+  const ctx = gsap.context(() => {
     animateHero();
     animateCounters();
     animateWhyChoose();
     animateServiceCards();
     animateSections();
-  });
+  }, scope);
+
+  return ctx;
 }
 
 export function refreshGSAP() {

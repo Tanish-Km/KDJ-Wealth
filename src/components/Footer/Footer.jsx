@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const companyLinks = [
@@ -10,7 +11,7 @@ const companyLinks = [
 ];
 
 const resourceLinks = [
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQ', href: '/#faq' },
   { label: 'Blogs', href: '/blogs' },
   { label: 'Contact', href: '/support' },
   { label: 'NRI Guide', href: '/nri-investments' },
@@ -50,10 +51,10 @@ export default function Footer() {
         <div className="footer__top">
           {/* Brand */}
           <div className="footer__brand">
-            <a href="/" className="footer__logo" aria-label="KDJ Wealth — Home">
+            <Link to="/" className="footer__logo" aria-label="KDJ Wealth — Home">
               <img src="/sun-logo.png" alt="KDJ Wealth Sun Logo" className="footer__logo-img" />
               <span className="footer__logo-text">KDJ Wealth</span>
-            </a>
+            </Link>
             <p className="footer__tagline">
               Building lasting wealth through personalized investment solutions, expert
               guidance, and goal-based financial planning.
@@ -86,7 +87,7 @@ export default function Footer() {
               <ul className="footer__col-list">
                 {companyLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="footer__link">{link.label}</a>
+                    <Link to={link.href} className="footer__link">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -97,7 +98,11 @@ export default function Footer() {
               <ul className="footer__col-list">
                 {resourceLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="footer__link">{link.label}</a>
+                    {link.href.startsWith('/') && !link.href.includes('#') ? (
+                      <Link to={link.href} className="footer__link">{link.label}</Link>
+                    ) : (
+                      <a href={link.href} className="footer__link">{link.label}</a>
+                    )}
                   </li>
                 ))}
               </ul>
