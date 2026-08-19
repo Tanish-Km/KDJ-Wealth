@@ -205,11 +205,17 @@
 
 /* NRI Page Variant — Global Orbital Mesh & Gold Spheres */
 .ambient-3d-nri {
-  background: radial-gradient(circle at 30% 70%, #0B2545 0%, #071A2E 65%, #051322 100%);
+  background: transparent !important;
+}
+.ambient-3d-nri .ambient-3d-grid {
+  background-image:
+    linear-gradient(rgba(200, 155, 60, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 155, 60, 0.05) 1px, transparent 1px);
+  opacity: 0.5;
 }
 .ambient-3d-nri .shape-ring-1 {
-  border-color: rgba(200, 155, 60, 0.5);
-  box-shadow: 0 0 48px rgba(200, 155, 60, 0.25);
+  border-color: rgba(200, 155, 60, 0.4);
+  box-shadow: 0 0 36px rgba(200, 155, 60, 0.15);
 }
 
 /* Blogs Page Variant — Soft Translucent Glass Mesh for Light Orange Gradient */
@@ -242,6 +248,82 @@
   top: 20%;
   background: radial-gradient(circle at 35% 35%, rgba(243, 208, 120, 0.6) 0%, rgba(200, 155, 60, 0.25) 70%, transparent 100%);
   box-shadow: 0 0 48px rgba(214, 158, 46, 0.25);
+}
+
+/* WhyChoose Variant — Luminous Warm Champagne & Gold 3D Orbitals */
+.ambient-3d-whychoose {
+  background: transparent !important;
+}
+
+.ambient-3d-whychoose .ambient-3d-grid {
+  background-image:
+    linear-gradient(rgba(200, 155, 60, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 155, 60, 0.05) 1px, transparent 1px);
+  opacity: 0.5;
+}
+
+.ambient-3d-whychoose .cube-face {
+  background: rgba(200, 155, 60, 0.03);
+  border: 1px solid rgba(200, 155, 60, 0.22);
+  box-shadow: 0 0 24px rgba(200, 155, 60, 0.08);
+}
+
+.ambient-3d-whychoose .shape-ring-1 {
+  border-color: rgba(200, 155, 60, 0.32);
+  box-shadow: 0 0 36px rgba(200, 155, 60, 0.12);
+}
+
+.ambient-3d-whychoose .shape-ring-2 {
+  border-color: rgba(94, 184, 234, 0.25);
+  box-shadow: 0 0 30px rgba(94, 184, 234, 0.1);
+}
+
+.ambient-3d-whychoose .sphere-gold {
+  background: radial-gradient(circle at 35% 35%, rgba(200, 155, 60, 0.35), rgba(200, 155, 60, 0.03) 70%);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  box-shadow: 0 12px 36px rgba(200, 155, 60, 0.15);
+}
+
+.ambient-3d-whychoose .sphere-navy {
+  display: none;
+}
+
+/* Services (ExploreVines) Variant — Crystal Sky & Azure 3D Geometry */
+.ambient-3d-services {
+  background: transparent !important;
+}
+
+.ambient-3d-services .ambient-3d-grid {
+  background-image:
+    linear-gradient(rgba(8, 120, 201, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 120, 201, 0.05) 1px, transparent 1px);
+  opacity: 0.55;
+}
+
+.ambient-3d-services .cube-face {
+  background: rgba(8, 120, 201, 0.03);
+  border: 1px solid rgba(8, 120, 201, 0.24);
+  box-shadow: 0 0 28px rgba(8, 120, 201, 0.1);
+}
+
+.ambient-3d-services .shape-ring-1 {
+  border-color: rgba(94, 184, 234, 0.35);
+  box-shadow: 0 0 36px rgba(94, 184, 234, 0.15);
+}
+
+.ambient-3d-services .shape-ring-2 {
+  border-color: rgba(200, 155, 60, 0.28);
+  box-shadow: 0 0 32px rgba(200, 155, 60, 0.1);
+}
+
+.ambient-3d-services .sphere-sky {
+  background: radial-gradient(circle at 35% 35%, rgba(94, 184, 234, 0.35), rgba(8, 120, 201, 0.04) 70%);
+  border: 1px solid rgba(94, 184, 234, 0.3);
+  box-shadow: 0 12px 36px rgba(8, 120, 201, 0.18);
+}
+
+.ambient-3d-services .sphere-navy {
+  display: none;
 }
 
 /* Reduced Motion Override */

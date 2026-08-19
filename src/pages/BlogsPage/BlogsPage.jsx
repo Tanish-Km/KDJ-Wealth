@@ -35,6 +35,111 @@ const categoryColors = {
   'Retirement': '#B7791F',
 };
 
+/* Helper to render structured blog content with question highlights, bullet points, callouts and disclaimers */
+function renderBlogContent(content, categoryColor) {
+  if (!Array.isArray(content)) {
+    return <p>{content}</p>;
+  }
+
+  return content.map((item, idx) => {
+    const trimmed = item.trim();
+
+    // Check if item is a section question or heading
+    if (trimmed.startsWith('### ') || trimmed.startsWith('## ') || (trimmed.endsWith('?') && trimmed.length < 90)) {
+      const headingText = trimmed.replace(/^#+\s*/, '');
+      const isQuestion = headingText.endsWith('?');
+      return (
+        <div key={idx} className={`blog-content-heading-wrap ${isQuestion ? 'is-question' : ''}`}>
+          <div className="blog-heading-icon" style={{ background: `${categoryColor}15`, color: categoryColor, borderColor: `${categoryColor}40` }}>
+            {isQuestion ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            )}
+          </div>
+          <h3 className="blog-content-heading">
+            {headingText}
+          </h3>
+        </div>
+      );
+    }
+
+    // Check if item is a Disclaimer
+    if (trimmed.toLowerCase().startsWith('disclaimer:') || trimmed.startsWith('[DISCLAIMER]')) {
+      const text = trimmed.replace(/^\[DISCLAIMER\]\s*/i, '').replace(/^Disclaimer:\s*/i, '');
+      return (
+        <div key={idx} className="blog-content-disclaimer">
+          <div className="disclaimer-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>Regulatory Disclaimer</span>
+          </div>
+          <p>{text}</p>
+        </div>
+      );
+    }
+
+    // Check if item is a Takeaway or Callout box
+    if (trimmed.startsWith('[CALLOUT]') || trimmed.toLowerCase().startsWith('conclusion:')) {
+      const text = trimmed.replace(/^\[CALLOUT\]\s*/i, '').replace(/^Conclusion:\s*/i, '');
+      return (
+        <div key={idx} className="blog-content-callout" style={{ borderLeftColor: categoryColor }}>
+          <div className="callout-head" style={{ color: categoryColor }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span>Strategic Investor Perspective</span>
+          </div>
+          <p>{text}</p>
+        </div>
+      );
+    }
+
+    // Check if item is a bullet item starting with '-' or '•' or 'Key: Value'
+    if (trimmed.startsWith('- ') || trimmed.startsWith('• ')) {
+      const bulletText = trimmed.replace(/^[-•]\s*/, '');
+      const colonIdx = bulletText.indexOf(':');
+      if (colonIdx > 0 && colonIdx < 35) {
+        const title = bulletText.slice(0, colonIdx);
+        const desc = bulletText.slice(colonIdx + 1);
+        return (
+          <div key={idx} className="blog-content-bullet">
+            <div className="bullet-dot" style={{ background: categoryColor }} />
+            <div className="bullet-text">
+              <strong>{title}:</strong> {desc}
+            </div>
+          </div>
+        );
+      }
+      return (
+        <div key={idx} className="blog-content-bullet">
+          <div className="bullet-dot" style={{ background: categoryColor }} />
+          <div className="bullet-text">{bulletText}</div>
+        </div>
+      );
+    }
+
+    // First paragraph is styled as lead intro
+    if (idx === 0) {
+      return <p key={idx} className="blog-content-lead">{trimmed}</p>;
+    }
+
+    // Normal paragraph
+    return <p key={idx}>{trimmed}</p>;
+  });
+}
+
 /* ── Blog Modal ── */
 const BlogModal = ({ post, onClose, triggerRef }) => {
   const modalRef = useRef(null);
@@ -109,15 +214,15 @@ const BlogModal = ({ post, onClose, triggerRef }) => {
         </div>
         <div className="blog-modal-body">
           {post.image && (
-            <figure className="blog-modal-figure" style={{ marginBottom: '24px' }}>
-              <img src={post.image} alt={post.title} className="blog-modal-image" style={{ width: '100%', borderRadius: '12px', height: 'auto' }} />
-              {post.caption && <figcaption style={{ fontSize: '0.85rem', color: '#526B82', marginTop: '8px', textAlign: 'center' }}>{post.caption}</figcaption>}
+            <figure className="blog-modal-figure" style={{ marginBottom: '28px' }}>
+              <img src={post.image} alt={post.title} className="blog-modal-image" style={{ width: '100%', borderRadius: '14px', height: 'auto', maxHeight: '420px', objectFit: 'cover' }} />
+              {post.caption && <figcaption style={{ fontSize: '0.85rem', color: '#526B82', marginTop: '10px', textAlign: 'center', fontStyle: 'italic' }}>{post.caption}</figcaption>}
             </figure>
           )}
           {post.content ? (
-            post.content.map((para, i) => <p key={i}>{para}</p>)
+            renderBlogContent(post.content, color)
           ) : (
-            <p>{post.excerpt}</p>
+            <p className="blog-content-lead">{post.excerpt}</p>
           )}
         </div>
       </div>

@@ -8,11 +8,11 @@ export const faqData = [
       },
       {
         q: 'How long has KDJ Wealth been serving investors?',
-        a: 'KDJ Wealth has been serving investors for over 4 years, building a strong track record of trust, transparency, and client-focused financial advisory services.',
+        a: 'KDJ Wealth has been serving investors for over 20 years, building a strong track record of trust, transparency, and client-focused financial advisory services.',
       },
       {
         q: 'How much Assets Under Management (AUM) does KDJ Wealth manage?',
-        a: 'KDJ Wealth proudly manages ₹8+ Crore in Assets Under Management (AUM), reflecting the trust and confidence that our growing investor community has placed in us.',
+        a: 'KDJ Wealth proudly manages ₹100+ Crore in Assets Under Management (AUM), reflecting the trust and confidence that our growing investor community has placed in us.',
       },
     ],
   },
@@ -50,7 +50,7 @@ export const faqData = [
       },
       {
         q: 'How can I contact KDJ Wealth?',
-        a: 'You can reach us by phone at +91 9821891816, email at Info.kdjcapital@gmail.com, or visit our website at www.kdjcapitalresearch.com. Our dedicated investor support team is always ready to assist you.',
+        a: 'You can reach us by phone at +91 9821891816, email at Info@kdjcapitalresearch.com, or visit our website at www.kdjcapitalresearch.com. Our dedicated investor support team is always ready to assist you.',
       },
     ],
   },

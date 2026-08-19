@@ -27,7 +27,7 @@ export default function Hero() {
 
         <p className={`hero__subtitle animate-on-scroll animate-delay-2 ${anim.className}`}>
           Personalized investment solutions, goal-based financial planning, and expert guidance
-          to help you achieve financial confidence — backed by 4+ years of trust and ₹8+ Crore AUM.
+          to help you achieve financial confidence — backed by 20+ years of trust and ₹100+ Crore AUM.
         </p>
 
         {/* Action Buttons */}
@@ -54,12 +54,12 @@ export default function Hero() {
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-number">4+</span>
+            <span className="hero__stat-number">20+</span>
             <span className="hero__stat-label">Years Experience</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-number">₹8Cr+</span>
+            <span className="hero__stat-number">₹100Cr+</span>
             <span className="hero__stat-label">Assets Managed</span>
           </div>
         </div>

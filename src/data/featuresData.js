@@ -1,9 +1,9 @@
 export const featuresData = [
   {
     icon: 'expert',
-    title: '4+ Years of Experience',
+    title: '20+ Years of Experience',
     description:
-      'With over 4 years of dedicated wealth management experience, we bring proven expertise to help you make informed financial decisions.',
+      'With over 20 years of dedicated wealth management experience, we bring proven expertise to help you make informed financial decisions.',
   },
   {
     icon: 'goal',
@@ -25,8 +25,8 @@ export const featuresData = [
   },
   {
     icon: 'review',
-    title: '₹8+ Crore AUM',
+    title: '₹100+ Crore AUM',
     description:
-      'Trusted by a growing community of investors across India, with ₹8+ Crore in Assets Under Management and counting.',
+      'Trusted by a growing community of investors across India, with ₹100+ Crore in Assets Under Management and counting.',
   },
 ];

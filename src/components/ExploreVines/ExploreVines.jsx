@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import { vinesData } from '../../data/vinesData';
 import VineCard from './VineCard';
+import Ambient3DBackground from '../Ambient3DBackground/Ambient3DBackground';
 import './ExploreVines.css';
 
 export default function ExploreVines() {
@@ -11,10 +12,10 @@ export default function ExploreVines() {
 
   return (
     <section className="explore-vines section" id="explore-vines" ref={sectionRef}>
+      <Ambient3DBackground variant="services" />
       <div className="container">
         {/* Section Header */}
         <div className="explore-vines__header">
-          <span className="section-badge">Comprehensive Offerings</span>
           <h2 className="section-title">
             Our <span className="text-gradient">Services</span>
           </h2>

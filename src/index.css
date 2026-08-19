@@ -487,10 +487,10 @@ p {
 
 /* ── Gradient Texts ── */
 .gradient-text,
-.text-gradient {
+.text-gradient,
+.kdj-brand-gradient {
   display: inline-block;
-  color: var(--kdj-navy);
-  background: linear-gradient(135deg, var(--kdj-navy) 0%, var(--kdj-gold) 60%, var(--kdj-deep-sky) 100%);
+  background: linear-gradient(90deg, #D4A343 0%, #B29F4D 20%, #6E8F67 40%, #3B7C9E 65%, #1872BA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

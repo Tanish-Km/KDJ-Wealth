@@ -41,7 +41,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex: 1 0 0;
   justify-content: flex-start;
   color: #F8FBFF;
@@ -55,20 +55,66 @@
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(243, 208, 120, 0.3));
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.header__logo-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .header__logo-text {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
-  color: #F8FBFF;
+  font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  background: linear-gradient(90deg, #FFFFFF 0%, #FFF5D6 25%, #F8DF8F 50%, #E8BA5A 78%, #C89B3C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   white-space: nowrap;
+  display: block;
+  text-align: center;
+  filter: drop-shadow(0 2px 8px rgba(243, 208, 120, 0.28));
+  transition: filter var(--transition-fast);
+}
+
+.header__logo-tagline {
+  display: block;
+  width: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.52rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  background: linear-gradient(90deg, #FFFFFF 0%, #FFF5D6 25%, #F8DF8F 50%, #E8BA5A 78%, #C89B3C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-top: 3px;
+  white-space: nowrap;
+  text-align: center;
+  opacity: 0.92;
+  transition: opacity var(--transition-fast), filter var(--transition-fast);
 }
 
 .header__logo:hover {
-  opacity: 0.95;
+  opacity: 1;
   transform: scale(1.02);
+}
+
+.header__logo:hover .header__logo-text {
+  filter: drop-shadow(0 2px 14px rgba(243, 208, 120, 0.55));
+}
+
+.header__logo:hover .header__logo-tagline {
+  opacity: 1;
+  filter: drop-shadow(0 1px 6px rgba(243, 208, 120, 0.4));
 }
 
 /* Desktop Nav (Centered in bar) */

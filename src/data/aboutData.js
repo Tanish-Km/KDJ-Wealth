@@ -8,7 +8,7 @@ export const storyData = {
   title: 'Our Story',
   paragraphs: [
     'KDJ Wealth was founded with a simple belief: every individual and family deserves honest, goal-oriented financial advice — not product-pushing sales calls.',
-    'For the past 4+ years, we have been helping investors across India make informed financial decisions through personalized investment solutions and unbiased financial guidance. Today, we proudly manage ₹8+ Crore Assets Under Management (AUM), reflecting the trust our investors have placed in us.',
+    'For the past 20+ years, we have been helping investors across India make informed financial decisions through personalized investment solutions and unbiased financial guidance. Today, we proudly manage ₹100+ Crore Assets Under Management (AUM), reflecting the trust our investors have placed in us.',
     'As an AMFI-registered Mutual Fund Distributor, we specialize in mutual fund advisory, goal-based financial planning, and comprehensive wealth management — always putting your financial goals first.',
   ],
 };
@@ -50,8 +50,8 @@ export const approachData = [
 ];
 
 export const statsData = [
-  { value: '4+', label: 'Years of Experience', icon: 'trendingUp' },
-  { value: '₹8Cr+', label: 'Assets Under Management', icon: 'wallet' },
+  { value: '20+', label: 'Years of Experience', icon: 'trendingUp' },
+  { value: '₹100Cr+', label: 'Assets Under Management', icon: 'wallet' },
   { value: '16+', label: 'Services Offered', icon: 'shield' },
   { value: '100%', label: 'Client-First Approach', icon: 'star' },
 ];
@@ -60,7 +60,7 @@ export const teamData = [
   {
     name: 'Aditya Akhriya',
     role: 'Director',
-    bio: 'AMFI-registered Mutual Fund Distributor with 4+ years of wealth management experience. Leading KDJ Wealth with a vision to help every investor achieve financial confidence.',
+    bio: 'AMFI-registered Mutual Fund Distributor with 20+ years of wealth management experience. Leading KDJ Wealth with a vision to help every investor achieve financial confidence.',
     initials: 'AA',
   },
 ];

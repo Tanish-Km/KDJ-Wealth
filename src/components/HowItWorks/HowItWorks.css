@@ -2,7 +2,9 @@
    HOW IT WORKS — Light Glass Step Cards
    ═══════════════════════════════════════════ */
 .how-it-works {
-  background: var(--bg-white);
+  background: linear-gradient(180deg, #FAFDFB 0%, #EFF6F1 50%, #F5FAF7 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .how-it-works__steps {

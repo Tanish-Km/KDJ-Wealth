@@ -2,7 +2,9 @@
    FAQ — Dark Glass Accordion
    ═══════════════════════════════════════════ */
 .faq {
-  background: var(--bg-light);
+  background: linear-gradient(180deg, #F5F9FC 0%, #EBF3F9 50%, #F2F7FB 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .faq__categories {

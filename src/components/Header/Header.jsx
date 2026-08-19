@@ -89,7 +89,10 @@ export default function Header() {
         {/* Sun Logo Emblem */}
         <Link to="/" className="header__logo" aria-label="KDJ Wealth — Home" onClick={handleCompactNav}>
           <img src="/sun-logo.png" alt="KDJ Wealth Sun Logo" className="header__logo-img" />
-          <span className="header__logo-text">KDJ WEALTH</span>
+          <div className="header__logo-brand">
+            <span className="header__logo-text">KDJ WEALTH</span>
+            <span className="header__logo-tagline">- Investment Artist</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

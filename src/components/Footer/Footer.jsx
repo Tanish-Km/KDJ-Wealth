@@ -14,20 +14,24 @@ const resourceLinks = [
   { label: 'FAQ', href: '/#faq' },
   { label: 'Blogs', href: '/blogs' },
   { label: 'Contact', href: '/support' },
-  { label: 'NRI Guide', href: '/nri-investments' },
+  { label: 'AMFI', href: 'https://www.amfiindia.com/' },
+  { label: 'CVLKRA', href: 'https://www.cvlkra.com/' },
+  { label: 'SEBI', href: 'https://www.sebi.gov.in/' },
 ];
 
 const finePrintLinks = [
-  { label: 'Disclaimers', href: '#' },
-  { label: 'Terms of Use', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
-  { label: 'Grievance Policy', href: '#' },
+  { label: 'Disclaimers', href: '/disclaimer' },
+  { label: 'Disclosure', href: '/disclosure' },
+  { label: 'Terms of Use', href: '/terms-of-use' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Grievance Policy', href: '/grievance-policy' },
 ];
 
 const serviceLinks = [
   { label: 'Wealth Management', href: '/#wealth-management' },
+  { label: 'SIF Funds', href: '/#sif-funds' },
   { label: 'Mutual Funds', href: '/#mutual-funds' },
-  { label: 'Financial Planning', href: '/#financial-planning' },
+  { label: 'Financial/Successor Planning', href: '/#financial-planning' },
   { label: 'Retirement Planning', href: '/#retirement-planning' },
   { label: 'Tax Planning', href: '/#tax-planning' },
   { label: 'NRI Investment Services', href: '/#nri-investment' },
@@ -53,7 +57,10 @@ export default function Footer() {
           <div className="footer__brand">
             <Link to="/" className="footer__logo" aria-label="KDJ Wealth — Home">
               <img src="/sun-logo.png" alt="KDJ Wealth Sun Logo" className="footer__logo-img" />
-              <span className="footer__logo-text">KDJ Wealth</span>
+              <div className="footer__logo-brand">
+                <span className="footer__logo-text">KDJ WEALTH</span>
+                <span className="footer__logo-tagline">-INVESTMENT ARTIST</span>
+              </div>
             </Link>
             <p className="footer__tagline">
               Building lasting wealth through personalized investment solutions, expert
@@ -98,7 +105,11 @@ export default function Footer() {
               <ul className="footer__col-list">
                 {resourceLinks.map((link) => (
                   <li key={link.label}>
-                    {link.href.startsWith('/') && !link.href.includes('#') ? (
+                    {link.href.startsWith('http') ? (
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__link">
+                        {link.label}
+                      </a>
+                    ) : link.href.startsWith('/') && !link.href.includes('#') ? (
                       <Link to={link.href} className="footer__link">{link.label}</Link>
                     ) : (
                       <a href={link.href} className="footer__link">{link.label}</a>
@@ -113,7 +124,11 @@ export default function Footer() {
               <ul className="footer__col-list">
                 {finePrintLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="footer__link">{link.label}</a>
+                    {link.href.startsWith('/') ? (
+                      <Link to={link.href} className="footer__link">{link.label}</Link>
+                    ) : (
+                      <a href={link.href} className="footer__link">{link.label}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -146,9 +161,9 @@ export default function Footer() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 www.kdjcapitalresearch.com
               </a>
-              <a href="mailto:Info.kdjcapital@gmail.com" className="footer__contact-item">
+              <a href="mailto:Info@kdjcapitalresearch.com" className="footer__contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Info.kdjcapital@gmail.com
+                Info@kdjcapitalresearch.com
               </a>
               <a href="tel:+919821891816" className="footer__contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

@@ -1,13 +1,85 @@
 /* ═══════════════════════════════════════════
-   NRI PAGE — Dark Premium Theme
+   NRI PAGE — Light Luxury Theme & Visual Engine
    ═══════════════════════════════════════════ */
 
+/* ── NRI Hero Fix ── */
+.nri-hero {
+  background: linear-gradient(160deg, #FBF9F4 0%, #F5EFE3 50%, #FAF5EB 100%) !important;
+}
+
+.nri-hero .page-hero-title {
+  color: #0B2545 !important;
+  font-weight: 800 !important;
+}
+
+.nri-hero .page-hero-subtitle {
+  color: #526B82 !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.nri-hero .btn-accent {
+  background: linear-gradient(135deg, #C89B3C 0%, #E8BA5A 100%) !important;
+  color: #071A2E !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 24px rgba(200, 155, 60, 0.35);
+}
+
+.nri-hero .btn-outline-light {
+  border-color: #0B2545 !important;
+  color: #0B2545 !important;
+  font-weight: 700 !important;
+  background: rgba(11, 37, 69, 0.04);
+}
+
+.nri-hero .page-hero-wave path {
+  fill: #FAF8F2 !important;
+}
+
+/* ── Section 1: Interactive 3D Showcase ── */
+.nri-interactive-showcase-section {
+  position: relative;
+  background: linear-gradient(180deg, #FAF8F2 0%, #EFF5FB 50%, #E8F0F8 100%);
+  padding: 70px 0 60px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.nri-interactive-showcase-section .section-header h2 {
+  color: #0B2545;
+}
+
+.nri-interactive-showcase-section .section-header p {
+  color: #526B82;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ── Section 2: Why India ── */
 .nri-why-section {
   position: relative;
-  background: linear-gradient(180deg, #071A2E 0%, #0B2545 60%, #061526 100%);
-  color: #F8FBFF;
-  padding: 100px 0;
+  background: linear-gradient(180deg, #FDFBF7 0%, #F6EFE2 50%, #FAF5EB 100%);
+  padding: 90px 0;
   overflow: hidden;
+}
+
+.nri-why-section .section-header .section-badge {
+  background: rgba(200, 155, 60, 0.14);
+  color: #B88928;
+  border: 1px solid rgba(200, 155, 60, 0.35);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 12px rgba(200, 155, 60, 0.12);
+}
+
+.nri-why-section .section-header h2 {
+  color: #0B2545;
+}
+
+.nri-why-section .section-header p {
+  color: #526B82;
 }
 
 .nri-why-grid {
@@ -21,12 +93,19 @@
 .nri-why-card {
   padding: 36px 24px;
   text-align: center;
-  background: rgba(11, 37, 69, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 16px 48px rgba(7, 26, 46, 0.25);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(200, 155, 60, 0.22);
+  box-shadow: 0 16px 44px rgba(11, 37, 69, 0.06);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.nri-why-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 155, 60, 0.45);
+  box-shadow: 0 20px 52px rgba(200, 155, 60, 0.16);
 }
 
 .nri-why-icon {
@@ -37,22 +116,33 @@
 }
 
 .nri-why-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 10px;
-  color: #F8FBFF;
+  color: #0B2545;
   font-weight: 700;
 }
 
 .nri-why-card p {
   font-size: 0.92rem;
-  color: rgba(248, 251, 255, 0.82);
+  color: #526B82;
   line-height: 1.7;
 }
 
-/* Tabs */
+/* ── Section 3: Investment Options ── */
+.nri-options-section {
+  position: relative;
+  background: linear-gradient(180deg, #F0F6FC 0%, #E3EFF9 50%, #EDF5FC 100%) !important;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.nri-options-section .section-header h2 {
+  color: #0B2545;
+}
+
 .nri-tabs {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 32px;
   flex-wrap: wrap;
   justify-content: center;
@@ -61,65 +151,84 @@
 .nri-tab {
   padding: 10px 24px;
   border-radius: var(--radius-full);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.88rem;
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #0B2545;
+  border: 1px solid rgba(8, 120, 201, 0.2);
   transition: all var(--transition-base);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 10px rgba(7, 26, 46, 0.04);
 }
 
 .nri-tab:hover {
-  border-color: rgba(11, 37, 69, 0.3);
-  color: var(--primary-light);
+  border-color: rgba(8, 120, 201, 0.4);
+  color: #0878C9;
+  transform: translateY(-2px);
 }
 
 .nri-tab.active {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: var(--text-white);
+  background: linear-gradient(135deg, #0878C9 0%, #0B2545 100%);
+  color: #FFFFFF;
   border-color: transparent;
-  box-shadow: 0 4px 20px rgba(11, 37, 69, 0.3);
+  box-shadow: 0 6px 20px rgba(8, 120, 201, 0.25);
 }
 
 .nri-tab-content {
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 44px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(8, 120, 201, 0.22);
+  box-shadow: 0 16px 48px rgba(7, 26, 46, 0.06);
+  border-radius: var(--radius-xl);
   max-width: 800px;
   margin: 0 auto;
 }
 
 .nri-tab-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   margin-bottom: 12px;
-  color: var(--primary-light);
+  color: #0B2545;
+  font-weight: 700;
 }
 
 .nri-tab-content p {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  color: #526B82;
+  line-height: 1.75;
 }
 
 .nri-features-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 14px;
 }
 
 .nri-features-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
+  gap: 10px;
+  font-size: 0.94rem;
+  color: #334D66;
+  font-weight: 500;
 }
 
 .nri-check {
-  color: var(--accent);
+  color: #0878C9;
   font-weight: 700;
   font-size: 1rem;
 }
 
-/* Steps Timeline */
+/* ── Section 4: Steps Timeline ── */
+.nri-steps-section {
+  position: relative;
+  background: linear-gradient(180deg, #F2F8F4 0%, #E6F3EB 50%, #EEF7F1 100%);
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.nri-steps-section .section-header h2 {
+  color: #0B2545;
+}
+
 .nri-steps-timeline {
   max-width: 760px;
   margin: 0 auto;
@@ -134,7 +243,7 @@
   top: 30px;
   bottom: 30px;
   width: 3px;
-  background: #DCEAF5;
+  background: linear-gradient(180deg, #C89B3C, #5E8C62);
   border-radius: 2px;
 }
 
@@ -168,7 +277,7 @@
   font-weight: 700;
   flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(11, 37, 69, 0.15);
-  border: 3px solid #DCEAF5;
+  border: 3px solid #FFFFFF;
   transition: all 0.3s ease;
   z-index: 1;
 }
@@ -178,21 +287,21 @@
   background: #C89B3C;
   color: #071A2E;
   border-color: rgba(200, 155, 60, 0.3);
-  box-shadow: 0 0 0 6px rgba(200, 155, 60, 0.15);
+  box-shadow: 0 0 0 6px rgba(200, 155, 60, 0.2);
 }
 
 .nri-step-content {
-  padding: 20px 24px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid #DCEAF5;
+  padding: 22px 28px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(94, 140, 98, 0.25);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(7, 26, 46, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 6px 24px rgba(7, 26, 46, 0.05);
 }
 
 .nri-step-content h3 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   margin-bottom: 8px;
   color: #0B2545;
   font-weight: 700;
@@ -204,10 +313,20 @@
   line-height: 1.7;
 }
 
-/* Calculator */
+/* ── Section 5: Calculator ── */
 .nri-calc-section {
   position: relative;
+  background: linear-gradient(180deg, #F6F4FA 0%, #EAE5F5 50%, #F3EFF9 100%) !important;
+  padding: 90px 0;
   overflow: hidden;
+}
+
+.nri-calc-section .section-header h2 {
+  color: #0B2545;
+}
+
+.nri-calc-section .section-header p {
+  color: #526B82;
 }
 
 .nri-calc-container {
@@ -216,25 +335,33 @@
 }
 
 .calc-card {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.03);
+  padding: 44px;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(11, 37, 69, 0.08);
 }
 
 .calc-card h3 {
-  color: var(--text-white);
-  font-size: 1.2rem;
+  color: #0B2545;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 28px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .calc-inputs {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   margin-bottom: 32px;
 }
 
@@ -242,35 +369,35 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334D66;
 }
 
 .calc-inputs input[type="range"] {
   width: 100%;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   appearance: none;
-  background: linear-gradient(to right, var(--primary), var(--accent));
+  background: linear-gradient(to right, #0878C9, #C89B3C);
   outline: none;
   cursor: pointer;
 }
 
 .calc-inputs input[type="range"]::-webkit-slider-thumb {
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: var(--text-white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(11, 37, 69, 0.2);
+  background: #0B2545;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(200, 155, 60, 0.35);
   cursor: pointer;
 }
 
 .calc-val {
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 0.95rem;
+  font-weight: 800;
+  color: #C89B3C;
+  font-size: 1.05rem;
 }
 
 .calc-results {
@@ -281,33 +408,46 @@
 
 .calc-result-item {
   text-align: center;
-  padding: 16px 8px;
+  padding: 16px 10px;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(245, 243, 250, 0.9);
+  border: 1px solid rgba(139, 92, 246, 0.18);
 }
 
 .calc-result-item span {
   display: block;
   font-size: 0.78rem;
-  color: var(--text-secondary);
+  color: #64748B;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 .calc-result-item strong {
-  font-size: 1.05rem;
-  color: var(--text-white);
+  font-size: 1.12rem;
+  color: #0B2545;
+  font-weight: 800;
 }
 
 .calc-result-item.accent strong {
-  color: var(--accent);
+  color: #C89B3C;
 }
 
 .calc-result-item.primary strong {
-  color: var(--primary-light);
+  color: #0878C9;
 }
 
-/* Case Studies */
+/* ── Section 6: Case Studies ── */
+.nri-cases-section {
+  position: relative;
+  background: linear-gradient(180deg, #FAF8F5 0%, #F2ECE4 50%, #F8F4EE 100%);
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.nri-cases-section .section-header h2 {
+  color: #0B2545;
+}
+
 .nri-cases-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -315,12 +455,21 @@
 }
 
 .nri-case-card {
-  padding: 32px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 34px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(200, 155, 60, 0.24);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 14px 44px rgba(7, 26, 46, 0.06);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.nri-case-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 155, 60, 0.5);
+  box-shadow: 0 20px 52px rgba(200, 155, 60, 0.15);
 }
 
 .nri-case-card::before {
@@ -329,15 +478,15 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  opacity: 0.6;
+  height: 4px;
+  background: linear-gradient(90deg, #C89B3C, #0878C9);
+  opacity: 0.8;
 }
 
 .nri-case-number {
   font-size: 2.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, rgba(11, 37, 69, 0.15), rgba(0, 230, 138, 0.1));
+  background: linear-gradient(135deg, #0B2545 0%, #C89B3C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -346,69 +495,151 @@
 }
 
 .nri-case-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   margin-bottom: 12px;
+  color: #0B2545;
+  font-weight: 700;
 }
 
 .nri-case-card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  color: #526B82;
   margin-bottom: 16px;
-}
-
-.nri-case-btn {
-  color: var(--primary-light);
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 0;
-}
-
-.nri-case-btn:hover {
-  color: var(--accent);
-}
-
-/* ── NRI Hero Subtitle & CTA Dark Text Contrast Fix ── */
-.nri-hero {
-  background: linear-gradient(160deg, #F8FAFC 0%, #EDF2F7 50%, #E2E8F0 100%) !important;
-}
-
-.nri-hero .page-hero-title {
-  color: #0F172A !important;
-  font-weight: 800 !important;
-}
-
-.nri-hero .page-hero-subtitle {
-  color: #2D3748 !important;
-  font-weight: 600 !important;
-  opacity: 1 !important;
-  font-size: 1.1rem;
   line-height: 1.7;
 }
 
-.nri-hero .btn-accent {
-  background: linear-gradient(135deg, #DD6B20 0%, #D69E2E 100%) !important;
-  color: #FFFFFF !important;
+.nri-case-btn {
+  color: #0878C9;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.nri-case-btn:hover {
+  color: #C89B3C;
+}
+
+/* ── Section 7: FAQ ── */
+.nri-faq-section {
+  position: relative;
+  background: linear-gradient(180deg, #F3F7FA 0%, #E7F1F8 50%, #EFF5FA 100%) !important;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.nri-faq-section .section-header h2 {
+  color: #0B2545;
+}
+
+.nri-faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nri-faq-item {
+  padding: 22px 26px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(8, 120, 201, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(7, 26, 46, 0.04);
+  transition: all var(--transition-base);
+}
+
+.nri-faq-item:hover {
+  border-color: rgba(8, 120, 201, 0.35);
+  transform: translateY(-2px);
+}
+
+.nri-faq-item.open {
+  border-color: rgba(200, 155, 60, 0.5);
+  box-shadow: 0 10px 30px rgba(200, 155, 60, 0.12);
+}
+
+.nri-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0B2545;
+}
+
+.nri-faq-icon {
+  font-size: 1.3rem;
+  color: #0878C9;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(8, 120, 201, 0.08);
+}
+
+.nri-faq-a {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(8, 120, 201, 0.1);
+}
+
+.nri-faq-a p {
+  font-size: 0.94rem;
+  color: #526B82;
+  line-height: 1.75;
+}
+
+/* ── Section 8: CTA ── */
+.nri-cta-section {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, #071A2E 0%, #0B2545 60%, #09203A 100%) !important;
+  overflow: hidden;
+}
+
+.nri-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.nri-cta-content h2 {
+  color: #FFFFFF;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 16px;
+}
+
+.nri-cta-content p {
+  color: rgba(248, 251, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 36px;
+}
+
+.nri-cta-content .btn-accent {
+  background: linear-gradient(135deg, #C89B3C 0%, #E8BA5A 100%) !important;
+  color: #071A2E !important;
   font-weight: 800 !important;
-  box-shadow: 0 6px 20px rgba(221, 107, 32, 0.3);
-}
-
-.nri-hero .btn-outline-light {
-  border-color: #DD6B20 !important;
-  color: #DD6B20 !important;
-  font-weight: 700 !important;
-}
-
-.nri-hero .page-hero-wave path {
-  fill: #F8FAFC !important;
+  box-shadow: 0 6px 28px rgba(200, 155, 60, 0.4);
 }
 
 /* ═══════════════════════════════════════════
-   NRI CASE STUDY MODAL — Exact Match with Blogs Modal
+   NRI CASE STUDY MODAL
    ═══════════════════════════════════════════ */
 .nri-modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -423,7 +654,7 @@
   max-width: 840px;
   max-height: 88vh;
   background: #FFFFFF;
-  border: 1px solid rgba(221, 107, 32, 0.3);
+  border: 1px solid rgba(200, 155, 60, 0.3);
   border-radius: var(--radius-xl);
   box-shadow: 0 24px 80px rgba(15, 23, 42, 0.25);
   overflow-y: auto;
@@ -443,15 +674,15 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: rgba(221, 107, 32, 0.1);
-  color: #DD6B20;
+  background: rgba(200, 155, 60, 0.1);
+  color: #C89B3C;
   transition: all var(--transition-fast);
   z-index: 10;
-  border: 1px solid rgba(221, 107, 32, 0.3);
+  border: 1px solid rgba(200, 155, 60, 0.3);
 }
 
 .nri-modal-close:hover {
-  background: #DD6B20;
+  background: #C89B3C;
   color: #FFFFFF;
   transform: rotate(90deg);
 }
@@ -467,7 +698,7 @@
   font-size: 0.76rem;
   font-weight: 800;
   color: #FFFFFF !important;
-  background: #DD6B20;
+  background: #C89B3C;
   letter-spacing: 0.04em;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -478,7 +709,7 @@
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   line-height: 1.3;
   margin-bottom: 18px;
-  color: #1A202C !important;
+  color: #0B2545 !important;
   font-weight: 800;
 }
 
@@ -487,13 +718,13 @@
   align-items: center;
   gap: 10px;
   font-size: 0.85rem;
-  color: #718096 !important;
+  color: #526B82 !important;
   font-weight: 600;
 }
 
 .nri-modal-dot {
   font-size: 0.8rem;
-  color: #DD6B20;
+  color: #C89B3C;
 }
 
 .nri-modal-body {
@@ -503,7 +734,7 @@
 .nri-modal-body h4 {
   font-size: 1.05rem;
   font-weight: 800;
-  color: #DD6B20;
+  color: #C89B3C;
   margin: 24px 0 12px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -517,14 +748,14 @@
 .nri-modal-body li {
   font-size: 1.02rem;
   line-height: 1.8;
-  color: #2D3748 !important;
+  color: #334D66 !important;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 .nri-modal-outcome {
-  background: rgba(221, 107, 32, 0.08);
-  border: 1px solid rgba(221, 107, 32, 0.25);
+  background: rgba(200, 155, 60, 0.08);
+  border: 1px solid rgba(200, 155, 60, 0.25);
   border-radius: var(--radius-lg);
   padding: 24px;
   margin-top: 28px;
@@ -532,95 +763,15 @@
 
 .nri-modal-outcome h4 {
   margin-top: 0;
-  color: #C53030 !important;
+  color: #0B2545 !important;
 }
 
 .nri-modal-outcome p {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #1A202C !important;
+  color: #0B2545 !important;
   font-weight: 600;
   margin: 0;
-}
-
-/* FAQ */
-.nri-faq-list {
-  max-width: 750px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.nri-faq-item {
-  padding: 20px 24px;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all var(--transition-base);
-}
-
-.nri-faq-item.open {
-  border-color: rgba(11, 37, 69, 0.15);
-  box-shadow: 0 4px 20px rgba(11, 37, 69, 0.06);
-}
-
-.nri-faq-q {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-}
-
-.nri-faq-icon {
-  font-size: 1.3rem;
-  color: var(--primary-light);
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(11, 37, 69, 0.08);
-}
-
-.nri-faq-a {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.nri-faq-a p {
-  font-size: 0.92rem;
-}
-
-/* CTA */
-.nri-cta-section {
-  padding: 120px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.nri-cta-content {
-  position: relative;
-  z-index: 1;
-}
-
-.nri-cta-content h2 {
-  color: var(--text-white);
-  margin-bottom: 16px;
-}
-
-.nri-cta-content p {
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  max-width: 550px;
-  margin: 0 auto 36px;
 }
 
 /* ── Responsive ── */
@@ -638,4 +789,5 @@
   .nri-step-number { width: 48px; height: 48px; font-size: 1rem; }
   .nri-tab-content { padding: 24px; }
   .calc-card { padding: 24px; }
+  .nri-modal-header, .nri-modal-body { padding: 32px 24px; }
 }

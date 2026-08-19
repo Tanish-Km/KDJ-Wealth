@@ -11,6 +11,11 @@ import NRIPage from './pages/NRIPage/NRIPage';
 import BlogsPage from './pages/BlogsPage/BlogsPage';
 import SupportPage from './pages/SupportPage/SupportPage';
 import CalculatorsPage from './pages/CalculatorsPage/CalculatorsPage';
+import DisclaimerPage from './pages/DisclaimerPage/DisclaimerPage';
+import GrievancePolicyPage from './pages/GrievancePolicyPage/GrievancePolicyPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage/TermsPage';
+import DisclosurePage from './pages/DisclosurePage/DisclosurePage';
 import { initGSAP, killGSAP } from './gsapAnimations';
 import './App.css';
 
@@ -42,6 +47,11 @@ function App() {
             <Route path="/nri-investments" element={<NRIPage />} />
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/support" element={<SupportPage />} />
+            <Route path="/disclaimer" element={<DisclaimerPage />} />
+            <Route path="/grievance-policy" element={<GrievancePolicyPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-use" element={<TermsPage />} />
+            <Route path="/disclosure" element={<DisclosurePage />} />
           </Routes>
         </main>
         <Footer />

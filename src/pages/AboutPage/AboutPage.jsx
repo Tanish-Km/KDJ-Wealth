@@ -45,7 +45,7 @@ const AboutPage = () => {
     <>
       <Helmet>
         <title>About KDJ Wealth | Trusted Financial Partner</title>
-        <meta name="description" content="Learn about KDJ Wealth — an AMFI-registered Mutual Fund Distributor with 4+ years of experience and ₹8+ Crore AUM, serving investors across India." />
+        <meta name="description" content="Learn about KDJ Wealth — an AMFI-registered Mutual Fund Distributor with 20+ years of experience and ₹100+ Crore AUM, serving investors across India." />
       </Helmet>
 
       {/* Hero */}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import { featuresData } from '../../data/featuresData';
 import FeatureCard from './FeatureCard';
+import Ambient3DBackground from '../Ambient3DBackground/Ambient3DBackground';
 import './WhyChoose.css';
 
 export default function WhyChoose() {
@@ -10,10 +11,10 @@ export default function WhyChoose() {
 
   return (
     <section className="why-choose section" id="why-choose" ref={sectionRef}>
+      <Ambient3DBackground variant="whychoose" />
       <div className="container">
         {/* Section Header */}
         <div className="why-choose__header">
-          <span className="section-badge">Why Partner With Us</span>
           <h2 className="section-title">
             Why Choose <span className="text-gradient">KDJ Wealth</span>
           </h2>

@@ -2,10 +2,26 @@
    EXPLORE VINES — 16 Financial Services Stage
    ═══════════════════════════════════════════ */
 .explore-vines {
-  background: var(--bg-light);
+  background: linear-gradient(180deg, #F0F6FC 0%, #E5F0FA 50%, #EEF6FD 100%);
   position: relative;
   overflow: hidden;
   padding: 40px 0 60px;
+}
+
+.explore-vines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(8, 120, 201, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 15% 80%, rgba(200, 155, 60, 0.06) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.explore-vines .container {
+  position: relative;
+  z-index: 1;
 }
 
 .explore-vines__header {

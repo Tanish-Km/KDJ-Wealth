@@ -8,9 +8,9 @@ export const contactMethodsData = [
   {
     icon: 'mail',
     title: 'Email Us',
-    value: 'Info.kdjcapital@gmail.com',
+    value: 'Info@kdjcapitalresearch.com',
     description: 'For detailed queries and documentation requests. We respond within 24 hours.',
-    action: 'mailto:Info.kdjcapital@gmail.com',
+    action: 'mailto:Info@kdjcapitalresearch.com',
     actionLabel: 'Send Email',
   },
   {

@@ -6,6 +6,7 @@ import PageHero from '../../components/PageHero/PageHero';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
 import AnimatedBackground from '../../components/AnimatedBackground/AnimatedBackground';
 import Ambient3DBackground from '../../components/Ambient3DBackground/Ambient3DBackground';
+import NRIInteractive3D from '../../components/NRIInteractive3D/NRIInteractive3D';
 import { getIcon } from '../../components/Icons/icons';
 import {
   nriHeroData, whyIndiaData, investmentOptionsData,
@@ -141,6 +142,20 @@ const NRIPage = () => {
         <a href="https://wa.me/919821891816" className="btn btn-accent glow-pulse" target="_blank" rel="noopener noreferrer">{getIcon('globe', 18)} Talk to NRI Advisor</a>
         <a href="#nri-calc" className="btn btn-outline-light">{getIcon('barChart', 18)} Try Our Calculator</a>
       </PageHero>
+
+      {/* Interactive 3D NRI Global Wealth Showcase */}
+      <section className="section nri-interactive-showcase-section">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="section-badge">Interactive 3D Wealth Experience</span>
+              <h2>Global Capital. High-Growth India.</h2>
+              <p>Seamlessly connect overseas wealth from Dubai, Singapore, London, and New York into FEMA-compliant Indian growth portfolios.</p>
+            </div>
+            <NRIInteractive3D />
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Why India */}
       <section className="section nri-why-section">
